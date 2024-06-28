@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Müzik - Doruk Somunkıran</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <header id="main-header" class="py-3 fixed-top transparent">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="/" class="navbar-brand">
+                <h4>Doruk Somunkıran</h4>
+            </a>
+            <button class="navbar-toggler d-lg-none" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="navbar-collapse" id="navbarNav">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="/" data-lang="ANA SAYFA">ANA SAYFA</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html" data-lang="HAKKIMDA">HAKKIMDA</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="music.html" data-lang="MÜZİK">MÜZİK</a></li>
+                    <li class="nav-item"><a class="nav-link" href="book.html" data-lang="KİTAP">KİTAP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="store.html" data-lang="EĞİTİM/DANIŞMANLIK">EĞİTİM/DANIŞMANLIK</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html" data-lang="İLETİŞİM">İLETİŞİM</a></li>
+                    <li class="nav-item"><button id="lang-toggle" class="btn">ENG</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="film-music-section py-5">
+        <div class="container">
+            <h1 class="text-center text-white" data-lang="FİLM/DİZİ MÜZİKLERİ">FİLM/DİZİ MÜZİKLERİ</h1>
+            <div id="filmMusicCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <!-- Müzik Kartları -->
+                            <div class="col-md-6 mb-6">
+                                <div class="music-card">
+                                    <img src="IMG_5080.jpg" alt="Deneme" class="music-image">
+                                    <div class="music-details">
+                                        <h5 class="music-title"><a href="#">Deneme</a></h5>
+                                        <p class="music-artist">by Doruk Somunkıran</p>
+                                        <div class="music-player">
+                                            <button class="play-button" onclick="togglePlay(this, 'audio1')"></button>
+                                            <div class="progress-bar">
+                                                <div class="progress" id="progress1"></div>
+                                                <div class="progress-handle" id="handle1"></div>
+                                            </div>
+                                            <span class="time" id="time1">00:00 / 04:01</span>
+                                            <audio id="audio1" data-progress-id="progress1" data-handle-id="handle1" data-time-id="time1" src="audio1.mp3"></audio>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="music-card">
+                                    <img src="IMG_5081.jpg" alt="Deneme" class="music-image">
+                                    <div class="music-details">
+                                        <h5 class="music-title"><a href="#">Deneme</a></h5>
+                                        <p class="music-artist">by Doruk Somunkıran</p>
+                                        <div class="music-player">
+                                            <button class="play-button" onclick="togglePlay(this, 'audio2')"></button>
+                                            <div class="progress-bar">
+                                                <div class="progress" id="progress2"></div>
+                                                <div class="progress-handle" id="handle2"></div>
+                                            </div>
+                                            <span class="time" id="time2">00:00 / 03:53</span>
+                                            <audio id="audio2" data-progress-id="progress2" data-handle-id="handle2" data-time-id="time2" src="audio2.mp3"></audio>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="music-card">
+                                    <img src="IMG_5082.jpg" alt="Deneme" class="music-image">
+                                    <div class="music-details">
+                                        <h5 class="music-title"><a href="#">Deneme</a></h5>
+                                        <p class="music-artist">by Doruk Somunkıran</p>
+                                        <div class="music-player">
+                                            <button class="play-button" onclick="togglePlay(this, 'audio3')"></button>
+                                            <div class="progress-bar">
+                                                <div class="progress" id="progress3"></div>
+                                                <div class="progress-handle" id="handle3"></div>
+                                            </div>
+                                            <span class="time" id="time3">00:00 / 04:01</span>
+                                            <audio id="audio3" data-progress-id="progress3" data-handle-id="handle3" data-time-id="time3" src="audio3.mp3"></audio>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="music-card">
+                                    <img src="soundcloud.png" alt="Deneme" class="music-image">
+                                    <div class="music-details">
+                                        <h5 class="music-title"><a href="#">Deneme</a></h5>
+                                        <p class="music-artist">by Doruk Somunkıran</p>
+                                        <div class="music-player">
+                                            <button class="play-button" onclick="togglePlay(this, 'audio4')"></button>
+                                            <div class="progress-bar">
+                                                <div class="progress" id="progress4"></div>
+                                                <div class="progress-handle" id="handle4"></div>
+                                            </div>
+                                            <span class="time" id="time4">00:00 / 04:01</span>
+                                            <audio id="audio4" data-progress-id="progress4" data-handle-id="handle4" data-time-id="time4" src="audio4.mp3"></audio>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="music-card">
+                                    <img src="soundcloud.png" alt="Deneme" class="music-image">
+                                    <div class="music-details">
+                                        <h5 class="music-title"><a href="#">Deneme</a></h5>
+                                        <p class="music-artist">by Doruk Somunkıran</p>
+                                        <div class="music-player">
+                                            <button class="play-button" onclick="togglePlay(this, 'audio5')"></button>
+                                            <div class="progress-bar">
+                                                <div class="progress" id="progress5"></div>
+                                                <div class="progress-handle" id="handle5"></div>
+                                            </div>
+                                            <span class="time" id="time5">00:00 / 04:01</span>
+                                            <audio id="audio5" data-progress-id="progress5" data-handle-id="handle5" data-time-id="time5" src="audio5.mp3"></audio>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="music-card">
+                                    <img src="soundcloud.png" alt="Deneme" class="music-image">
+                                    <div class="music-details">
+                                        <h5 class="music-title"><a href="#">Deneme</a></h5>
+                                        <p class="music-artist">by Doruk Somunkıran</p>
+                                        <div class="music-player">
+                                            <button class="play-button" onclick="togglePlay(this, 'audio6')"></button>
+                                            <div class="progress-bar">
+                                                <div class="progress" id="progress6"></div>
+                                                <div class="progress-handle" id="handle6"></div>
+                                            </div>
+                                            <span class="time" id="time6">00:00 / 04:01</span>
+                                            <audio id="audio6" data-progress-id="progress6" data-handle-id="handle6" data-time-id="time6" src="audio6.mp3"></audio>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Daha fazla müzik kartı için diğer carousel-item div'lerini ekleyin -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <!-- Müzik Kartları -->
+                            <div class="col-md-6 mb-4">
+                                <div class="music-card">
+                                    <img src="soundcloud.png" alt="Deneme" class="music-image">
+                                    <div class="music-details">
+                                        <h5 class="music-title"><a href="#">Deneme</a></h5>
+                                        <p class="music-artist">by Doruk Somunkıran</p>
+                                        <div class="music-player">
+                                            <button class="play-button" onclick="togglePlay(this, 'audio7')"></button>
+                                            <div class="progress-bar">
+                                                <div class="progress" id="progress7"></div>
+                                                <div class="progress-handle" id="handle7"></div>
+                                            </div>
+                                            <span class="time" id="time7">00:00 / 04:01</span>
+                                            <audio id="audio7" data-progress-id="progress7" data-handle-id="handle7" data-time-id="time7" src="audio7.mp3"></audio>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="music-card">
+                                    <img src="soundcloud.png" alt="Deneme" class="music-image">
+                                    <div class="music-details">
+                                        <h5 class="music-title"><a href="#">Deneme</a></h5>
+                                        <p class="music-artist">by Doruk Somunkıran</p>
+                                        <div class="music-player">
+                                            <button class="play-button" onclick="togglePlay(this, 'audio8')"></button>
+                                            <div class="progress-bar">
+                                                <div class="progress" id="progress8"></div>
+                                                <div class="progress-handle" id="handle8"></div>
+                                            </div>
+                                            <span class="time" id="time8">00:00 / 04:01</span>
+                                            <audio id="audio8" data-progress-id="progress8" data-handle-id="handle8" data-time-id="time8" src="audio8.mp3"></audio>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="music-card">
+                                    <img src="soundcloud.png" alt="Deneme" class="music-image">
+                                    <div class="music-details">
+                                        <h5 class="music-title"><a href="#">Deneme</a></h5>
+                                        <p class="music-artist">by Doruk Somunkıran</p>
+                                        <div class="music-player">
+                                            <button class="play-button" onclick="togglePlay(this, 'audio9')"></button>
+                                            <div class="progress-bar">
+                                                <div class="progress" id="progress9"></div>
+                                                <div class="progress-handle" id="handle9"></div>
+                                            </div>
+                                            <span class="time" id="time9">00:00 / 04:01</span>
+                                            <audio id="audio9" data-progress-id="progress9" data-handle-id="handle9" data-time-id="time9" src="audio9.mp3"></audio>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="music-card">
+                                    <img src="soundcloud.png" alt="Deneme" class="music-image">
+                                    <div class="music-details">
+                                        <h5 class="music-title"><a href="#">Deneme</a></h5>
+                                        <p class="music-artist">by Doruk Somunkıran</p>
+                                        <div class="music-player">
+                                            <button class="play-button" onclick="togglePlay(this, 'audio10')"></button>
+                                            <div class="progress-bar">
+                                                <div class="progress" id="progress10"></div>
+                                                <div class="progress-handle" id="handle10"></div>
+                                            </div>
+                                            <span class="time" id="time10">00:00 / 04:01</span>
+                                            <audio id="audio10" data-progress-id="progress10" data-handle-id="handle10" data-time-id="time10" src="audio10.mp3"></audio>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="music-card">
+                                    <img src="soundcloud.png" alt="Deneme" class="music-image">
+                                    <div class="music-details">
+                                        <h5 class="music-title"><a href="#">Deneme</a></h5>
+                                        <p class="music-artist">by Doruk Somunkıran</p>
+                                        <div class="music-player">
+                                            <button class="play-button" onclick="togglePlay(this, 'audio11')"></button>
+                                            <div class="progress-bar">
+                                                <div class="progress" id="progress11"></div>
+                                                <div class="progress-handle" id="handle11"></div>
+                                            </div>
+                                            <span class="time" id="time11">00:00 / 04:01</span>
+                                            <audio id="audio11" data-progress-id="progress11" data-handle-id="handle11" data-time-id="time11" src="audio11.mp3"></audio>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="music-card">
+                                    <img src="soundcloud.png" alt="Deneme" class="music-image">
+                                    <div class="music-details">
+                                        <h5 class="music-title"><a href="#">Deneme</a></h5>
+                                        <p class="music-artist">by Doruk Somunkıran</p>
+                                        <div class="music-player">
+                                            <button class="play-button" onclick="togglePlay(this, 'audio12')"></button>
+                                            <div class="progress-bar">
+                                                <div class="progress" id="progress12"></div>
+                                                <div class="progress-handle" id="handle12"></div>
+                                            </div>
+                                            <span class="time" id="time12">00:00 / 04:01</span>
+                                            <audio id="audio12" data-progress-id="progress12" data-handle-id="handle12" data-time-id="time12" src="audio12.mp3"></audio>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#filmMusicCarousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#filmMusicCarousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="albums-section py-5">
+        <div class="container">
+            <h1 class="text-center text-white" data-lang="ALBÜMLER">ALBÜMLER</h1>
+            <div class="row">
+                <!-- Müzik Kartları -->
+                <div class="col-md-6 mb-4">
+                    <div class="music-card">
+                        <img src="soundcloud.png" alt="Album 1" class="music-image">
+                        <div class="music-details">
+                            <h5 class="music-title"><a href="#">Album 1</a></h5>
+                            <p class="music-artist">by Doruk Somunkıran</p>
+                            <div class="music-player">
+                                <button class="play-button" onclick="togglePlay(this, 'audio3')"></button>
+                                <div class="progress-bar">
+                                    <div class="progress" id="progress3"></div>
+                                    <div class="progress-handle" id="handle3"></div>
+                                </div>
+                                <span class="time" id="time3">00:00 / 04:01</span>
+                                <audio id="audio3" data-progress-id="progress3" data-handle-id="handle3" data-time-id="time3" src="audio3.mp3"></audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="music-card">
+                        <img src="soundcloud.png" alt="Album 2" class="music-image">
+                        <div class="music-details">
+                            <h5 class="music-title"><a href="#">Album 2</a></h5>
+                            <p class="music-artist">by Doruk Somunkıran</p>
+                            <div class="music-player">
+                                <button class="play-button" onclick="togglePlay(this, 'audio4')"></button>
+                                <div class="progress-bar">
+                                    <div class="progress" id="progress4"></div>
+                                    <div class="progress-handle" id="handle4"></div>
+                                </div>
+                                <span class="time" id="time4">00:00 / 03:53</span>
+                                <audio id="audio4" data-progress-id="progress4" data-handle-id="handle4" data-time-id="time4" src="audio4.mp3"></audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="music-card">
+                        <img src="soundcloud.png" alt="Album 2" class="music-image">
+                        <div class="music-details">
+                            <h5 class="music-title"><a href="#">Album 2</a></h5>
+                            <p class="music-artist">by Doruk Somunkıran</p>
+                            <div class="music-player">
+                                <button class="play-button" onclick="togglePlay(this, 'audio4')"></button>
+                                <div class="progress-bar">
+                                    <div class="progress" id="progress4"></div>
+                                    <div class="progress-handle" id="handle4"></div>
+                                </div>
+                                <span class="time" id="time4">00:00 / 03:53</span>
+                                <audio id="audio4" data-progress-id="progress4" data-handle-id="handle4" data-time-id="time4" src="audio4.mp3"></audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="music-card">
+                        <img src="soundcloud.png" alt="Album 2" class="music-image">
+                        <div class="music-details">
+                            <h5 class="music-title"><a href="#">Album 2</a></h5>
+                            <p class="music-artist">by Doruk Somunkıran</p>
+                            <div class="music-player">
+                                <button class="play-button" onclick="togglePlay(this, 'audio4')"></button>
+                                <div class="progress-bar">
+                                    <div class="progress" id="progress4"></div>
+                                    <div class="progress-handle" id="handle4"></div>
+                                </div>
+                                <span class="time" id="time4">00:00 / 03:53</span>
+                                <audio id="audio4" data-progress-id="progress4" data-handle-id="handle4" data-time-id="time4" src="audio4.mp3"></audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Diğer müzik kartlarını benzer şekilde ekleyin -->
+            </div>
+        </div>
+
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6fWUfwFsEnwZsG85hPmDy3?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    
+        <footer class="newsletter text-center py-5 bg-dark text-white">
+            <div class="container">
+                <h2 data-lang="tr">HABER BÜLTENİNE KAYIT OLUN</h2>
+                <p data-lang="tr">Son haberlerden, eğitimlerden ve videolardan ilk önce sizin haberiniz olsun...</p>
+                <form class="row g-3 justify-content-center">
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" data-placeholder-tr="İsim" data-placeholder-en="Name" placeholder="İsim">
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" data-placeholder-tr="Soyisim" data-placeholder-en="Surname" placeholder="Soyisim">
+                    </div>
+                    <div class="col-md-3">
+                        <input type="email" class="form-control" data-placeholder-tr="Email Adresi" data-placeholder-en="Email Address" placeholder="Email Adresi">
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn w-100" data-lang="tr">Kayıt Ol!</button>
+                    </div>
+                </form>
+            </div>
+            <div class="footer-bottom mt-5">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <a href="#" class="text" data-lang="tr">Şartlar ve Koşullar</a>
+                    <div class="socials">
+                        <a href="https://www.youtube.com/c/DorukSomunkiran" class="text"><img src="youtube_icon.png" alt="YouTube"></a>
+                        <a href="https://www.instagram.com/doruk.somunkiran/" class="text"><img src="instagram_icon.png" alt="Instagram"></a>
+                        <a href="https://www.udemy.com/user/doruk-somunkiran/" class="text"><img src="udemy.png" alt="Udemy"></a>
+                        <a href="https://www.linkedin.com/in/doruk-somunkiran/?originalSubdomain=tr" class="text"><img src="linkedin_icon.png" alt="LinkedIn"></a>
+                        <a href="https://twitter.com/DorukSomunkiran" class="text"><img src="twitter_icon.jpg" alt="Twitter"></a>
+                    </div>
+                </div>
+            </div>
+            
+        </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script3.js"></script>
+</body>
+</html>

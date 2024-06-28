@@ -1,0 +1,906 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url('main_header.png') no-repeat center center/cover;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #000;
+    font-family: 'Exo 2', sans-serif;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #272728ac;
+    transition: background-color 0.3s;
+    font-family: 'Exo 2', sans-serif;
+    z-index: 1000;
+    padding: 15px;
+}
+
+header.scrolled {
+    background-color: #000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+}
+
+header .logo {
+    font-size: 18px;
+    color: #ffffff;
+    margin-right: 5rem;
+    margin-left: 2rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-right: 3rem;
+}
+
+header nav ul li {
+    margin-left: 2rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ffffff; /* Beyaz renk */
+    font-size: 14px; /* Daha küçük yazı tipi boyutu */
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #dcdcdc; /* Üzerine gelindiğinde rengin koyulaşması */
+}
+
+header.scrolled .logo,
+header.scrolled nav ul li a {
+    color: #fff;
+}
+
+.lang-toggle {
+    font-size: 12px; /* Yazı tipi boyutunu ayarlayın */
+    padding: 5px 10px; /* İçerik dolgusu */
+    margin-left: 3rem; /* Kenar boşluğu */
+    align-self: center; /* Header yüksekliğinin ortasında hizalama */
+}
+
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+}
+
+.hero .container {
+    max-width: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero .main-heading {
+    font-size: 66px;
+    margin-top: 13rem;
+    font-weight: bold;
+    color: #000;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.hero .sub-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.genres {
+    background: black;
+    clip-path: ellipse(75% 50% at 50% 0), ellipse(75% 50% at 50% 100%);
+    padding: 10rem 0; /* Daha büyük padding */
+    height: 60vh;
+}
+
+.genres .container h2 {
+    color: white;
+}
+
+.videos {
+    background: linear-gradient(180deg, rgba(15, 15, 15, 0.5), rgba(7, 22, 64, 0.5));
+    clip-path: ellipse(75% 50% at 50% 0), ellipse(75% 50% at 50% 100%);
+    padding: 10rem 0; /* Daha büyük padding */
+    height: 60vh;
+}
+
+.genres h2, .videos h2 {
+    font-size: 3rem; /* Daha büyük font boyutu */
+}
+
+.book {
+    background: #171c25; /* Antrasit arka plan rengi */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    height: 60vh;
+    text-align: left; /* Sol hizalama */
+}
+
+.book img {
+    max-width: 30%; /* Görselin genişliğini ayarlayın */
+    margin-left: 10rem; /* Görselin sağ tarafına boşluk ekleyin */
+}
+
+.book-content {
+    max-width: 40%; /* İçerik genişliğini ayarlayın */
+    margin-left: 5rem;
+    color:#CCC8AA;
+}
+
+.book h2 {
+    margin-bottom: 1rem;
+    margin-left: 5rem;
+}
+
+.book a.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 10px 20px; /* Butonun boyutlarını ayarlayın */
+    background-color: #708585; /* Buton rengi */
+    color: #2F2F2F;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+}
+
+.book a.btn:hover {
+    background-color: #0b4178; /* Buton üstüne gelince değişen renk */
+    color: #ffffff; /* Buton üstüne gelince değişen yazı rengi */
+}
+
+.book-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* İçeriği sola hizala */
+}
+
+.book-content .btn {
+    align-self: center; /* Butonu ortala */
+}
+
+.education-consulting {
+    background: linear-gradient(180deg, rgba(15, 15, 15, 0.5), rgba(7, 22, 64, 0.5));
+    color: #CCC8AA;
+    padding: 2rem 0;
+}
+
+.education-consulting h2 {
+    font-size: 2.5rem; /* Başlık boyutunu ayarlayın */
+    margin-bottom: 2rem;
+}
+
+.platforms {
+    display: flex;
+    justify-content: space-between; /* Linkleri genişletmek için */
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.platform {
+    flex: 1;
+    text-align: center;
+    background-color: #fff; /* Arka plan rengi */
+    padding: 1rem; /* İçerik dolgusu */
+    border-radius: 10px; /* Kenar yuvarlama */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Hafif gölge */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px; /* Sabit yükseklik */
+}
+
+.platform-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.platform-link {
+    font-size: 2rem; /* Link yazı boyutunu ayarlayın */
+    text-decoration: none;
+}
+
+.platform-link.udemy {
+    color: #A435F0; /* Udemy rengi */
+}
+
+.platform-link.skillshare {
+    color: #000000; /* Skillshare rengi */
+}
+
+.platform-link.youtube {
+    color: #B2071D; /* YouTube rengi */
+}
+
+.platform-link:hover {
+    color: #28469f; /* Link üzerine gelince renk değişimi */
+}
+
+.platform-logo {
+    width: 40px; /* Logoların genişliğini ayarlayın */
+    height: 40px; /* Logoların yüksekliğini ayarlayın */
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%; /* Slideshow genişliği */
+    margin: auto;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mySlides {
+    display: none;
+    text-align: center;
+}
+
+.platform-image {
+    width: 100%; /* Sabit genişlik */
+    height: 200px; /* Sabit yükseklik */
+    object-fit: cover; /* Görsellerin boyutuna göre kesme */
+    border: 1px solid #CCC8AA; /* Görsel kenarlık */
+    border-radius: 10px; /* Kenarlık yuvarlama */
+    transition: filter 0.3s;
+    margin: 0 auto;
+}
+
+/* Udemy bölümündeki görseller için efekt */
+.udemy-slide .platform-image {
+    filter: grayscale(100%);
+}
+
+/* Skillshare bölümündeki görseller için siyah beyaz efekt */
+.skillshare-slide .platform-image {
+    filter: grayscale(100%);
+}
+
+/* YouTube bölümündeki görseller için efekt */
+.youtube-slide .platform-image {
+    filter: grayscale(100%);
+}
+
+.text {
+    display: block;
+    margin-top: 0.5rem; /* Üst boşluk */
+    color: #333; /* Metin rengi */
+    font-size: 1rem; /* Metin boyutu */
+    text-align: center; /* Metin hizalaması */
+    overflow: hidden; /* Taşan metni gizler */
+    text-overflow: ellipsis; /* Taşan metin için kesme efekti */
+    max-width: 100%; /* Maksimum genişlik */
+    height: 3rem; /* Sabit yükseklik */
+    line-height: 1.5rem; /* Satır yüksekliği */
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 10px 20px; /* Butonun boyutlarını ayarlayın */
+    background-color: #708585; /* Buton rengi */
+    color: #2F2F2F;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #0b4178; /* Buton üstüne gelince değişen renk */
+    color: #ffffff; /* Buton üstüne gelince değişen yazı rengi */
+}
+
+@media (max-width: 992px) {
+    .hero .main-heading {
+        font-size: 48px;
+    }
+
+    .hero .sub-heading {
+        font-size: 20px;
+    }
+
+    .book img {
+        max-width: 40%;
+        margin-left: 5rem;
+    }
+
+    .book-content {
+        max-width: 50%;
+        margin-left: 3rem;
+    }
+
+    .education-consulting {
+        height: auto;
+    }
+
+    .platforms {
+        flex-direction: column;
+    }
+
+    .platform {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        width: 100%;
+    }
+
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px;
+        bottom: 0;
+    }
+
+    header .logo {
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    header nav ul {
+        flex-direction: row;
+        align-items: center;
+        margin-right: 0;
+    }
+
+    header nav ul li {
+        margin-left: 5px;
+        margin-bottom: 0;
+    }
+
+    header nav ul li a {
+        font-size: 12px;
+    }
+
+    .hero .main-heading {
+        font-size: 36px;
+    }
+
+    .hero .sub-heading {
+        font-size: 18px;
+    }
+
+    .book {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .book img {
+        max-width: 80%;
+        margin-left: 0;
+        margin-bottom: 2rem;
+    }
+
+    .book-content {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .education-consulting {
+        height: auto;
+    }
+
+    .platforms {
+        flex-direction: column;
+    }
+
+    .platform {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        width: 100%;
+    }
+
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+        bottom: 0;
+        padding: 20px;
+    }
+
+    header .logo {
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    header nav ul {
+        flex-direction: row;
+        align-items: center;
+        margin-right: 0;
+    }
+
+    header nav ul li {
+        margin-left: 3px;
+        margin-bottom: 0;
+    }
+
+    header nav ul li a {
+        font-size: 10px;
+    }
+
+    .hero .main-heading {
+        font-size: 28px;
+    }
+
+    .hero .sub-heading {
+        font-size: 16px;
+    }
+
+    .book {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .book img {
+        max-width: 50%;
+        margin-left: 0;
+        margin-bottom: 2rem;
+    }
+
+    .book-content {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .education-consulting {
+        background: linear-gradient(180deg, rgba(15, 15, 15, 0.5), rgba(7, 22, 64, 0.5));
+        color: #CCC8AA;
+        padding: 2rem 0;
+        height: auto;
+        max-width: 100%;
+    }
+    
+    .education-consulting h2 {
+        font-size: 1rem; /* Başlık boyutunu ayarlayın */
+        margin-bottom: 2rem;
+    }
+
+    .platforms {
+        flex-direction: column;
+    }
+
+    .platform {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Navbar mobile */
+@media (max-width: 768px) {
+    header {
+        width: 100%;
+    }
+
+    header .container {
+        flex-wrap: wrap;
+    }
+
+    header nav {
+        display: none;
+        width: 100%;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .navbar-toggler {
+        display: inline-block;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        font-size: 1.25rem;
+        color: #ffffff;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%2878, 82, 83, 0.5%29' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+    .show {
+        display: block;
+    }
+}
+
+/* Footer stilleri */
+.newsletter {
+    background: #000000; /* Arka plan rengi */
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.newsletter h2 {
+    font-size: 2.5rem; /* Başlık boyutunu ayarlayın */
+    margin-bottom: 1rem;
+    color:#28469f;
+}
+
+.newsletter p {
+    font-size: 1rem; /* Açıklama yazısı boyutunu ayarlayın */
+    margin-bottom: 2rem;
+    color:#CCC8AA;
+}
+
+.newsletter form .form-control {
+    height: 100%; /* Yüksekliği sabitleyin */
+    border-radius: 0; /* Kenar yuvarlama */
+}
+
+.newsletter form .btn {
+    background-color: #28469f;
+    color: black;
+    border: none;
+    font-size: 1rem;
+    height: 100%; /* Yüksekliği sabitleyin */
+    display: flex; /* Flex kutu modeli */
+    align-items: center; /* Ortala */
+    justify-content: center; /* İçeriği yatay olarak ortala */
+    margin-top: 0; /* Üst boşluğu kaldır */
+}
+
+.newsletter form .row {
+    align-items: center; /* Tüm form elemanlarını ortala */
+}
+
+.newsletter form .btn:hover {
+    background-color: #1a1a41;
+}
+
+footer {
+    background-color: #000; /* Siyah */
+    color:#CCC8AA;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+footer a {
+    color:#CCC8AA;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #1E90FF; /* Mavi */
+}
+
+.footer-bottom {
+    background: #000000;
+    padding: 2rem 0;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+}
+
+.footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-bottom a {
+    color:#CCC8AA;
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 0 0.5rem;
+}
+
+.footer-bottom a:hover {
+    color:#CCC8AA;
+}
+
+.footer-bottom .socials {
+    display: flex;
+    justify-content: center; /* Ortaya hizalamak için */
+    gap: 10px; /* İkonlar arasına boşluk eklemek için */
+}
+
+.footer-bottom .socials img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px; /* Tüm ikonların aynı boyutta olması için genişliği belirleyin */
+    height: 20px; /* Tüm ikonların aynı boyutta olması için yüksekliği belirleyin */
+    filter: none !important; /* Brightness ve invert filtrelerini tamamen kaldırın */
+    transition: none; /* Geçiş efektlerini kaldırın */
+    opacity: 1 !important; /* Görünürlüğü tam yapın */
+}
+
+.footer-bottom .socials img:hover {
+    filter: none !important; /* Hover durumunda da herhangi bir filtre uygulamayın */
+    opacity: 1 !important; /* Hover durumunda görünürlüğü tam yapın */
+}
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 992px) {
+    .hero .main-heading {
+        font-size: 48px;
+    }
+
+    .hero .sub-heading {
+        font-size: 20px;
+    }
+
+    .book img {
+        max-width: 40%;
+        margin-left: 5rem;
+    }
+
+    .book-content {
+        max-width: 50%;
+        margin-left: 3rem;
+    }
+
+    .education-consulting {
+        height: auto;
+    }
+
+    .platforms {
+        flex-direction: column;
+    }
+
+    .platform {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        width: 100%;
+    }
+
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px;
+        bottom: 0;
+    }
+
+    header .logo {
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    header nav ul {
+        flex-direction: row;
+        align-items: center;
+        margin-right: 0;
+    }
+
+    header nav ul li {
+        margin-left: 5px;
+        margin-bottom: 0;
+    }
+
+    header nav ul li a {
+        font-size: 12px;
+    }
+
+    .hero .main-heading {
+        font-size: 36px;
+    }
+
+    .hero .sub-heading {
+        font-size: 18px;
+    }
+
+    .book {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .book img {
+        max-width: 80%;
+        margin-left: 0;
+        margin-bottom: 2rem;
+    }
+
+    .book-content {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .education-consulting {
+        height: auto;
+    }
+
+    .platforms {
+        flex-direction: column;
+    }
+
+    .platform {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        width: 100%;
+    }
+
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+        bottom: 0;
+        padding: 20px;
+    }
+
+    header .logo {
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    header nav ul {
+        flex-direction: row;
+        align-items: center;
+        margin-right: 0;
+    }
+
+    header nav ul li {
+        margin-left: 3px;
+        margin-bottom: 0;
+    }
+
+    header nav ul li a {
+        font-size: 10px;
+    }
+
+    .hero .main-heading {
+        font-size: 28px;
+    }
+
+    .hero .sub-heading {
+        font-size: 16px;
+    }
+
+    .book {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .book img {
+        max-width: 50%;
+        margin-left: 0;
+        margin-bottom: 2rem;
+    }
+
+    .book-content {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .education-consulting {
+        background: linear-gradient(180deg, rgba(15, 15, 15, 0.5), rgba(7, 22, 64, 0.5));
+        color: #CCC8AA;
+        padding: 2rem 0;
+        height: auto;
+        max-width: 100%;
+    }
+    
+    .education-consulting h2 {
+        font-size: 1rem; /* Başlık boyutunu ayarlayın */
+        margin-bottom: 2rem;
+    }
+
+    .platforms {
+        flex-direction: column;
+    }
+
+    .platform {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Navbar mobile */
+@media (max-width: 768px) {
+    header {
+        width: 100%;
+    }
+
+    header .container {
+        flex-wrap: wrap;
+    }
+
+    header nav {
+        display: none;
+        width: 100%;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .navbar-toggler {
+        display: inline-block;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        font-size: 1.25rem;
+        color: #ffffff;
+        border-color: white;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Toggler ikon rengi beyaz yapar */
+    }
+
+    .show {
+        display: block;
+    }
+}
